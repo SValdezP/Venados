@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="actmain_tab_name_copa">COPA MX</string>
+    <string name="actmain_tab_name_ascenso">ASCENSO MX</string>
+</resources>
