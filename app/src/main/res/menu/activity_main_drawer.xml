@@ -5,7 +5,20 @@
 
     <group android:checkableBehavior="single">
 
+        <item
+            android:id="@+id/menu_drawer_home"
+            android:icon="@mipmap/ic_home"
+            android:title="@string/menu_drawer_home" />
 
+        <item
+            android:id="@+id/menu_drawer_statistics"
+            android:icon="@mipmap/ic_statistics"
+            android:title="@string/menu_drawer_statistics" />
+
+        <item
+            android:id="@+id/menu_drawer_players"
+            android:icon="@mipmap/ic_players"
+            android:title="@string/menu_drawer_players" />
 
     </group>
 
