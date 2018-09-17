@@ -1,20 +1,22 @@
 package com.dacode.prueba.venadostest.activities
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.design.widget.TabLayout
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.dacode.prueba.venadostest.R
 import com.dacode.prueba.venadostest.adapters.PageAdapter
+import com.dacode.prueba.venadostest.fragments.HomeFragment
+import com.dacode.prueba.venadostest.fragments.PlayersFragment
+import com.dacode.prueba.venadostest.fragments.StatisticsFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
 
         val tabLayout : TabLayout = findViewById(R.id.tabLayout)
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.actmain_tab_name_copa)))
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         viewPager.adapter = pagerAdapter
 
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
@@ -68,12 +72,43 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
+
+        var flag = false
+        var fragment : Fragment? = null
+
         when (item.itemId) {
 
+            R.id.menu_drawer_home -> {
+                fragment = HomeFragment()
+                flag = true
+            }
+
+            R.id.menu_drawer_statistics -> {
+                fragment = StatisticsFragment()
+                flag = true
+            }
+
+            R.id.menu_drawer_players -> {
+                fragment = PlayersFragment()
+                flag = true
+            }
         }
 
-        drawer_layout.closeDrawer(GravityCompat.START)
+        if (flag) {
+            changeFragment(fragment, item)
+            drawer_layout.closeDrawers()
+        }
+
         return true
+    }
+
+    fun changeFragment(fragment: Fragment?, item: MenuItem){
+
+        supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.contentFrameLayout, fragment)
+                .commit()
+
+        supportActionBar!!.title = item.title
     }
 }
