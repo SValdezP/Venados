@@ -24,11 +24,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.dacode.prueba.venadostest.adapters.GamesAdapter
 import com.dacode.prueba.venadostest.model.Games
-import kotlinx.android.synthetic.main.coordinator_layout.*
-import kotlinx.android.synthetic.main.coordinator_layout.view.*
-import kotlinx.android.synthetic.main.fragment_tab_copa_mx.view.*
-import kotlinx.android.synthetic.main.tab_layout.*
-import kotlinx.android.synthetic.main.tab_layout.view.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -91,7 +86,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mRecyclerView = recyclerV!!.findViewById(R.id.recyclerCopaMx) as RecyclerView
         mLayoutManager = LinearLayoutManager(this)
 
-        mAdapter = GamesAdapter(games!!, R.layout.tab_copamx, object : GamesAdapter.OnItemClickListener {
+        mAdapter = GamesAdapter(games!!, R.layout.tabs_games, object : GamesAdapter.OnItemClickListener {
             override fun onItemClick(games: Games, position: Int) {
                 Toast.makeText(this@MainActivity, "hello", Toast.LENGTH_LONG).show()
             }
