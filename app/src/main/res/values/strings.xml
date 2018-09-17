@@ -15,4 +15,6 @@
     <string name="menu_drawer_statistics">Statistics</string>
     <string name="menu_drawer_players">Players</string>
     <string name="t_view_tab_copa_team_name">Venados F.C</string>
+    <string name="model_player_position">Defensa</string>
+    <string name="model_player_name">Carlos Vela</string>
 </resources>

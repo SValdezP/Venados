@@ -2,39 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:layout_width="140pt"
-    android:layout_height="140pt"
-    android:background="@color/colorGreen"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:padding="5pt">
 
 
     <LinearLayout
-        android:background="@drawable/background_player"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_player"
+            android:layout_gravity="center"
             android:id="@+id/imageView"
-            android:layout_width="40pt"
-            android:layout_height="40pt"
-            app:srcCompat="@drawable/ic_menu_camera" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_mteam" />
 
         <TextView
             android:gravity="center_horizontal"
             android:id="@+id/textViewTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14pt"
             android:textStyle="bold"
-            android:text="Defensa" />
+            android:textColor="@color/colorBlack"
+            android:text="@string/model_player_position" />
 
         <TextView
             android:gravity="center_horizontal"
             android:id="@+id/textViewDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Carlos Vela" />
+            android:textColor="@color/colorBlack"
+            android:text="@string/model_player_name" />
+
     </LinearLayout>
 </LinearLayout>
