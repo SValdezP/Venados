@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.view.View.inflate
 import android.widget.Toast
 import com.dacode.prueba.venadostest.R
 import com.dacode.prueba.venadostest.adapters.PageAdapter
@@ -16,6 +17,8 @@ import com.dacode.prueba.venadostest.fragments.HomeFragment
 import com.dacode.prueba.venadostest.fragments.PlayersFragment
 import com.dacode.prueba.venadostest.fragments.StatisticsFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.coordinator_layout.view.*
+import kotlinx.android.synthetic.main.tab_layout.view.*
 import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -25,12 +28,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        val view = inflate(this, R.layout.fragment_home, null)
 
-        val tabLayout : TabLayout = findViewById(R.id.tabLayout)
+        val tabLayout : TabLayout = view.tabLayout
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.actmain_tab_name_copa)))
         tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.actmain_tab_name_ascenso)))
 
-        val viewPager: ViewPager = findViewById(R.id.viewPager)
+        val viewPager: ViewPager = view.viewPager
         val pagerAdapter = PageAdapter(supportFragmentManager, tabLayout.tabCount)
 
         viewPager.adapter = pagerAdapter
