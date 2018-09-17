@@ -66,7 +66,7 @@
 
             <ImageView
                 android:id="@+id/imageViewTabCopaTeam"
-                android:src="@mipmap/ic_team"
+                android:src="@mipmap/ic_mteam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"/>

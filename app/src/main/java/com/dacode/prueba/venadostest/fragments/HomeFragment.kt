@@ -1,30 +1,52 @@
 package com.dacode.prueba.venadostest.fragments
 
-
 import android.os.Bundle
+import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import android.widget.Toast
 import com.dacode.prueba.venadostest.R
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.tab_layout.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val myView = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val tabLayout : TabLayout = myView.tabLayout //mView!!.findViewById(R.id.tabLayout) as TabLayout
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.actmain_tab_name_copa)))
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.actmain_tab_name_ascenso)))
+
+        /*val viewPager: ViewPager = myView.viewPager //mView.findViewById(R.id.viewPager) as ViewPager
+        val pagerAdapter = PageAdapter(supportFragmentManager, tabLayout.tabCount)
+
+        viewPager.adapter = pagerAdapter
+
+        viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))*/
+
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                Toast.makeText(context, "Reselected", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+                Toast.makeText(context, "Unselected", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val position = tab!!.position
+                viewPager.currentItem = position
+            }
+
+        })
+
+        return myView
     }
-
-
 }
