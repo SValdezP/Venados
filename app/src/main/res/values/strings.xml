@@ -17,4 +17,11 @@
     <string name="t_view_tab_copa_team_name">Venados F.C</string>
     <string name="model_player_position">Defensa</string>
     <string name="model_player_name">Carlos Vela</string>
+    <string name="player_details_ficha_tecnica">FICHA TÉCNICA</string>
+    <string name="player_details_fecha_nacimiento">FECHA NACIMIENTO</string>
+    <string name="player_details_lugar_nacimiento">LUGAR DE NACIMIENTO</string>
+    <string name="player_details_peso">PESO</string>
+    <string name="player_details_altura">ALTURA</string>
+    <string name="player_details_equipo_anterior">EQUIPO ANTERIOR</string>
+    <string name="player_details_numero">NÚMERO</string>
 </resources>
