@@ -35,7 +35,7 @@ class TabAscensoMx : Fragment() {
 
         mAdapter = GamesAdapter(games!!, R.layout.tabs_games, object : GamesAdapter.OnItemClickListener {
             override fun onItemClick(games: Games, position: Int) {
-                Toast.makeText(context, "hello", Toast.LENGTH_LONG).show()
+                //TODO: Implement functionality to be able to add an event on calendar
             }
         })
 

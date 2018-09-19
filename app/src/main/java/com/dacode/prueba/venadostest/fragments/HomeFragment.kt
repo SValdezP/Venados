@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.dacode.prueba.venadostest.R
 import com.dacode.prueba.venadostest.adapters.PageAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.tab_layout.view.*
 
@@ -18,7 +17,7 @@ class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+
         val myView = inflater.inflate(R.layout.fragment_home, container, false)
 
         val tabLayout : TabLayout = myView.tabLayout //mView!!.findViewById(R.id.tabLayout) as TabLayout
@@ -32,22 +31,20 @@ class HomeFragment : Fragment() {
 
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
-
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                Toast.makeText(context, "Reselected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Reselected", Toast.LENGTH_SHORT)
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                Toast.makeText(context, "Unselected", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Unselected", Toast.LENGTH_SHORT)
             }
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 val position = tab!!.position
                 viewPager.currentItem = position
             }
-
         })
 
         return myView
