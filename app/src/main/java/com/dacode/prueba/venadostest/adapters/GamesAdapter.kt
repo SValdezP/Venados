@@ -26,7 +26,7 @@ class GamesAdapter(games: List<Games>, private var layout: Int, clickListener: O
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        //Picasso.get(this.context).load(games!![position]).fit().into(holder.imageViewTeam)
         holder.bind(games!![position], itemClickListener)
     }
 
@@ -42,7 +42,7 @@ class GamesAdapter(games: List<Games>, private var layout: Int, clickListener: O
         var imageViewTeam: ImageView = itemView.findViewById(R.id.imageViewTabCopaTeam)
         var textViewHomeScore: TextView = itemView.findViewById(R.id.tViewTabCopaHomeScore)
         var textViewOpponentScore: TextView = itemView.findViewById(R.id.tViewTabCopaOpponentScore)
-        var imageViewOpponent: ImageView = itemView.findViewById(R.id.imageViewTabCopaTeam)
+        var imageViewOpponent: ImageView = itemView.findViewById(R.id.imageViewTabCopaOpponent)
         var textViewOpponentName: TextView = itemView.findViewById(R.id.tViewTabCopaOpponentName)
 
         fun bind(games: Games, listener: OnItemClickListener?) {
@@ -51,12 +51,12 @@ class GamesAdapter(games: List<Games>, private var layout: Int, clickListener: O
             textViewDate.text = games.dateTime
             textViewDay.text = games.dayTime
 
-            Picasso.get().load(games.teamImage!!).fit().into(imageViewTeam)
+            //Picasso.get().load(games.teamImage!!).fit().into(imageViewTeam)
 
             textViewHomeScore.text = games.homeScore.toString()
             textViewOpponentScore.text = games.awayScore.toString()
 
-            Picasso.get().load(games.opponentImage!!).fit().into(imageViewOpponent)
+            //Picasso.get().load(games.opponentImage!!).fit().into(imageViewOpponent)
             textViewOpponentName.text = games.opponentName
 
             itemView.setOnClickListener { listener!!.onItemClick(games, adapterPosition) }

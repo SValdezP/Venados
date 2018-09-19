@@ -57,6 +57,14 @@ class TabCopaMx : Fragment() {
                 add(Games("FEBRERO", "8", "LUN", R.mipmap.ic_mteam, 0, 2, R.mipmap.ic_opponent, "Puebla", true, "Copa MX"))
                 add(Games("MARZO", "13", "VIER", R.mipmap.ic_mteam, 2, 2, R.mipmap.ic_opponent, "Celaya F.C.", true, "Copa MX"))
                 add(Games("ABRIL", "7", "DOM", R.mipmap.ic_mteam, 0, 0, R.mipmap.ic_opponent, "Monterrey", true, "Copa MX"))
+                add(Games("MAYO", "25", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "UNAM", true, "Copa MX"))
+                add(Games("JUNIO", "8", "LUN", R.mipmap.ic_mteam, 0, 2, R.mipmap.ic_opponent, "Puebla", true, "Copa MX"))
+                add(Games("JULIO", "13", "VIER", R.mipmap.ic_mteam, 2, 2, R.mipmap.ic_opponent, "Celaya F.C.", true, "Copa MX"))
+                add(Games("AGOSTO", "25", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "UNAM", true, "Copa MX"))
+                add(Games("SEPTIEMBRE", "8", "LUN", R.mipmap.ic_mteam, 0, 2, R.mipmap.ic_opponent, "Puebla", true, "Copa MX"))
+                add(Games("OCTUBRE", "13", "VIER", R.mipmap.ic_mteam, 2, 2, R.mipmap.ic_opponent, "Celaya F.C.", true, "Copa MX"))
+                add(Games("NOVIEMBRE", "25", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "UNAM", true, "Copa MX"))
+                add(Games("DICIEMBRE", "8", "LUN", R.mipmap.ic_mteam, 0, 2, R.mipmap.ic_opponent, "Puebla", true, "Copa MX"))
             }
         }
     }

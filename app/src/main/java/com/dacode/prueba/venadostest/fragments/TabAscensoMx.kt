@@ -55,9 +55,17 @@ class TabAscensoMx : Fragment() {
         return object : ArrayList<Games>() {
             init {
                 add(Games("ENERO", "25", "SAB", R.mipmap.ic_mteam, 0, 1, R.mipmap.ic_opponent, "TM Fútbol Club", true, "Ascenso MX"))
-                add(Games("ENERO", "25", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético Zacatepec ", true, "Ascenso MX"))
-                add(Games("ENERO", "25", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético de San Luis ", true, "Ascenso MX"))
-                add(Games("ENERO", "25", "SAB", R.mipmap.ic_mteam, 4, 3, R.mipmap.ic_opponent, "Celaya F.C.", true, "Ascenso MX"))
+                add(Games("FEBRERO", "04", "LUN", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético Zacatepec ", true, "Ascenso MX"))
+                add(Games("MARZO", "07", "MAR", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético de San Luis ", true, "Ascenso MX"))
+                add(Games("ABRIL", "12", "JUEV", R.mipmap.ic_mteam, 4, 3, R.mipmap.ic_opponent, "Celaya F.C.", true, "Ascenso MX"))
+                add(Games("MAYO", "11", "SAB", R.mipmap.ic_mteam, 0, 1, R.mipmap.ic_opponent, "TM Fútbol Club", true, "Ascenso MX"))
+                add(Games("JUNIO", "29", "VIER", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético Zacatepec ", true, "Ascenso MX"))
+                add(Games("JULIO", "30", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético de San Luis ", true, "Ascenso MX"))
+                add(Games("AGOSTO", "03", "DOM", R.mipmap.ic_mteam, 4, 3, R.mipmap.ic_opponent, "Celaya F.C.", true, "Ascenso MX"))
+                add(Games("SEPTIEMBRE", "14", "SAB", R.mipmap.ic_mteam, 0, 1, R.mipmap.ic_opponent, "TM Fútbol Club", true, "Ascenso MX"))
+                add(Games("OCTUBRE", "05", "DOM", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético Zacatepec ", true, "Ascenso MX"))
+                add(Games("NOVIEMBRE", "06", "SAB", R.mipmap.ic_mteam, 3, 1, R.mipmap.ic_opponent, "Club Atlético de San Luis ", true, "Ascenso MX"))
+                add(Games("DICIEMBRE", "25", "JUEV", R.mipmap.ic_mteam, 4, 3, R.mipmap.ic_opponent, "Celaya F.C.", true, "Ascenso MX"))
             }
         }
     }

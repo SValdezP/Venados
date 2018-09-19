@@ -38,13 +38,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_calendar"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/tViewTabCopaDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:text="16"
                 android:textColor="@color/colorWhite" />
 
@@ -52,7 +52,7 @@
                 android:id="@+id/tViewTabCopaDay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal"
                 android:text="SAB"
                 android:textColor="@color/colorWhite" />
 
@@ -69,7 +69,7 @@
                 android:src="@mipmap/ic_mteam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/tViewTabCopaTeamName"
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/t_view_tab_copa_team_name"
                 android:textColor="@color/colorWhite"
-                android:layout_gravity="center" />
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
 
@@ -126,7 +126,7 @@
                 android:src="@mipmap/ic_opponent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center_horizontal"/>
 
             <TextView
                 android:id="@+id/tViewTabCopaOpponentName"
@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:text="Venados F.C"
                 android:textColor="@color/colorWhite"
-                android:layout_gravity="center" />
+                android:layout_gravity="center_horizontal" />
 
         </LinearLayout>
 
