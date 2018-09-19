@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".fragments.PlayerDetails">
+    tools:context=".activities.DummyPlayerDetailsActivity">
 
-    <!--<android.support.v4.widget.NestedScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
@@ -89,7 +90,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/player_details_fecha_nacimiento"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -107,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/player_details_lugar_nacimiento"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -125,7 +126,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/player_details_peso"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -143,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/player_details_altura"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -161,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/player_details_equipo_anterior"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -179,7 +180,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="@string/player_details_numero"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#000000"
                         android:textStyle="bold" />
 
@@ -197,7 +198,7 @@
             </android.support.v7.widget.CardView>
         </LinearLayout>
 
-    </android-->.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 
 </LinearLayout>

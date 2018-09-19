@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.ToxicBakery.viewpager.transforms.*
 import com.dacode.prueba.venadostest.R
 import com.dacode.prueba.venadostest.adapters.PageAdapter
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -30,6 +31,8 @@ class HomeFragment : Fragment() {
         viewPager.adapter = pagerAdapter
 
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+
+        viewPager.setPageTransformer(true, DepthPageTransformer())
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
